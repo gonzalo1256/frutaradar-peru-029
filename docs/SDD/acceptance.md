@@ -1,4 +1,4 @@
-# Criterios de aceptación y trazabilidad · v0.4
+# Criterios de aceptación y trazabilidad · v0.5
 
 - AC01 → FR01/09: 24 PDF oficiales y 72 precios en el corte inicial, tres frutas por reporte, con fuente, fecha, página, envase y conversión. Contraste independiente de tablas geométricas con las 72 filas.
 - AC02 → FR02: corte 20/10 excluye posteriores; 25/10 usa última observación del 24; antes del corpus produce vacío. Ningún día ausente se interpola.
@@ -32,3 +32,10 @@ Estos criterios validan cobertura y trazabilidad observable. No evalúan utilida
 - AC20 → FR14/15: la UI expone captura estática, ausencia de distrito/tienda seleccionada y disponibilidad de Wong indicada como “Sin Stock”. No se modifica la automatización MIDAGRI, ni se habilita compra o recomendación.
 
 La captura de precios retail no demuestra vigencia futura, stock local, entrega en Lima, equivalencia de calidad ni el precio final de caja.
+
+## Guía de uso y asistencia permitida · 10/11/2026
+
+- AC21 → FR16: la vista “Cómo usar FrutaRadar” describe cómo llegar a mayorista, retail, radar, calendario y fuentes; qué filtros seleccionar; qué recibe la persona; y qué no puede concluir de la evidencia.
+- AC22 → FR16: la guía distingue fecha del precio de fecha de consulta, observación por kg de precio por unidad, comparación exacta de variedad y cálculo de gasto mayorista.
+- AC23 → FR17: la política nombra Codex o ChatGPT como únicas IA permitidas; informa que la web no incluye chat ni transmisión automática de datos a modelos.
+- AC24 → límites: la guía no solicita dirección exacta y mantiene desactivadas predicción y recomendación de compra.

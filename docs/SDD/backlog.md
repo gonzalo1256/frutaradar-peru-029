@@ -1,4 +1,4 @@
-# Plan y estado de implementación · v0.4
+# Plan y estado de implementación · v0.5
 
 ## Completado técnicamente
 
@@ -11,6 +11,7 @@
 - Ampliación de 43 opciones de canasta, 34 familias con precios, filtros por categoría/producto/variedad/mercado/fecha y fuente directa por observación: 2.440 filas y 27 PDF al corte 9/11/2026.
 - Betarraga, espinaca, coliflor y kion incorporados desde el boletín conjunto oficial. Atributos varietales que la fuente no declara y cinco productos sugeridos sin observación permanecen sin precio.
 - Snapshot retail de Tottus y Wong con 13 cotizaciones, filtro de categoría/producto/etiqueta/tienda/fecha, unidad de origen, normalización comprobable a S/kg y estado visible de disponibilidad.
+- Guía web de uso detallado, entradas esperadas, resultados por canal, interpretación de límites y política global de asistencia limitada a Codex o ChatGPT; no hay chat ni envío automático a modelos.
 - Pruebas, contraste independiente de las 72 filas y revisión visual de PDF. Resultado UI y comprobaciones del Atlas registrados en validation.md.
 
 ## P0 · Calidad y metodología

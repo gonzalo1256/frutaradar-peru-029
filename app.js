@@ -16,7 +16,7 @@ function renderStatus(){
   $('update-status').textContent=`${scheduled} · ${state}. Última ejecución: ${timeLabel(runStatus?.last_run_at)}. Éxito: ${timeLabel(runStatus?.last_success_at)}. Cambio de datos: ${timeLabel(runStatus?.last_data_change_at)}. ${stale?'DATOS DESACTUALIZADOS: más de 2 días.':''} Equipo y Codex deben estar disponibles; recarga para leer novedades.`;
   $('update-status').classList.toggle('warning',stale||runStatus?.run_status==='failed');
 }
-function showView(){const view=['radar','productos','retail','calendario','fuentes'].includes(location.hash.slice(1))?location.hash.slice(1):'radar';document.querySelectorAll('.view').forEach(el=>el.hidden=el.id!==view);document.querySelectorAll('[data-view]').forEach(el=>{el.classList.toggle('active',el.dataset.view===view);if(el.dataset.view===view)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');});}
+function showView(){const view=['radar','productos','retail','guia','calendario','fuentes'].includes(location.hash.slice(1))?location.hash.slice(1):'radar';document.querySelectorAll('.view').forEach(el=>el.hidden=el.id!==view);document.querySelectorAll('[data-view]').forEach(el=>{el.classList.toggle('active',el.dataset.view===view);if(el.dataset.view===view)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');});}
 function chart(rows){
   if(!rows.length){$('chart').innerHTML='<p class="muted">Sin observaciones para este periodo. Prueba otro corte o el histórico completo.</p>';return;}
   const w=620,h=240,left=45,right=25,top=28,bottom=47;

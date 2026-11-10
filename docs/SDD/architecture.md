@@ -1,4 +1,4 @@
-# Arquitectura y decisiones · v0.4
+# Arquitectura y decisiones · v0.5
 
 ## ADR-001 · Demo estática y archivos de datos
 
@@ -47,3 +47,9 @@ retail-data.json contiene cotizaciones de fichas online observadas manualmente. 
 Un precio expresado por kg se conserva; una presentación solo se convierte cuando el peso aparece explícitamente en el rótulo o ficha. Los productos por unidad sin peso, como betarraga y coliflor del corte actual, no reciben valor S/kg. La fecha no prueba que el mismo precio continúe vigente al abrir el enlace. Las páginas pueden requerir distrito/tienda; Wong mostró ausencia de stock en las fichas consultadas y Tottus solicitó ubicación para validar cobertura.
 
 El snapshot retail no forma parte de tools/collect.py ni de la automatización MIDAGRI, no usa ubicación del usuario y no activa recomendaciones. La publicación GitHub Pages sigue siendo manual y estática; cada release copia el archivo actual solo tras revisar los cambios.
+
+## ADR-008 · Guía y política de asistencia
+
+La vista `#guia` documenta el flujo de navegación y filtros, la interpretación de fecha/mercado/unidad, los resultados de cada panel y sus límites. Incluye solo los datos mínimos que la persona necesita seleccionar; la aplicación no solicita dirección exacta.
+
+Política global: la IA que ayude a FrutaRadar debe ser Codex o ChatGPT. La web no incrusta un chat ni transmite selecciones, historial o archivos a modelos. Si la persona comparte datos manualmente con uno de esos asistentes, la respuesta debe mantener fuente, fecha, mercado, unidad y faltantes, sin generar predicción ni recomendación de compra.

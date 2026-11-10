@@ -1,4 +1,4 @@
-# Especificación del producto · v0.4
+# Especificación del producto · v0.5
 
 FrutaRadar Perú / Peru Fruit Radar · #029 · 10/11/2026 · America/Lima. Demo local con cobertura real ampliada por MIDAGRI. Aceptación humana y utilidad predictiva pendientes.
 
@@ -25,6 +25,8 @@ Mercados observados: Gran Mercado Mayorista de Lima (GMML) y Mercado Mayorista d
 - FR13: filtrar el snapshot minorista por categoría, producto, etiqueta/variedad, supermercado y fecha; la fila siempre conserva el canal y la fuente.
 - FR14: informar si el precio es promocional, si falta seleccionar distrito/tienda y si la ficha marca falta de stock. Un precio listado no garantiza compra ni entrega.
 - FR15: mantener retail-data.json como snapshot separado. El colector diario solo actualiza publicaciones MIDAGRI y no hace scraping ni despliega automáticamente precios comerciales.
+- FR16: ofrecer una guía visible que explique las vistas, pasos de filtrado, unidades, fechas, fuentes, resultados, límites y la información mínima que se espera del usuario.
+- FR17: la asistencia de IA permitida para FrutaRadar se limita a Codex o ChatGPT. La web no integra un chat, no llama modelos ni envía automáticamente selecciones o datasets a un proveedor.
 
 ## Catálogo y resolución varietal
 
@@ -39,6 +41,8 @@ Los rótulos verifican algunas variedades específicas: Piña Golden; Manzana Im
 La comparación mayorista por kg homologa unidad publicada, no calidad, tamaño, empaque, origen agrícola, flete, merma ni margen minorista. Las cotizaciones de supermercados se presentan como canal separado y tampoco homologan calidad, distrito, entrega, stock o descuentos condicionados. Se comparan etiquetas solo cuando coinciden fecha, producto y texto de variedad; no se mezclan días ni nombres aproximados.
 
 No se predice baja de precios ni se activa recomendación de compra. El snapshot retail tiene fecha de captura visible y no pertenece al refresco diario; una página pública puede quedar desfasada aunque el precio mayorista local se actualice. Sin disponibilidad por distrito, calidad declarada, ruta y costos de destino, la demo es una consulta trazable, no un precio garantizado para el hogar. Un dato mayorista de más de dos días se marca desactualizado por política operativa.
+
+La guía orienta a la persona sobre cómo consultar sin exponer información personal. Si pide una interpretación asistida, la respuesta se prepara con Codex o ChatGPT, citando filas y fuentes y conservando las advertencias. La mera presencia de una IA no añade predicción ni recomendación de compra.
 
 ## Éxito y siguiente evaluación
 

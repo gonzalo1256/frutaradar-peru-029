@@ -1,4 +1,4 @@
-# Traspaso y operación · v0.4
+# Traspaso y operación · v0.5
 
 Estado al 10/11/2026: canasta de 43 opciones (34 con precio oficial), 2.440 observaciones y 27 fuentes PDF del GMML/MMF2 y MMF2 detallado. Último corte incorporado: 9/11/2026 en la copia revisada. No hay pronóstico ni recomendación de compra validada.
 
@@ -21,6 +21,8 @@ La actualización local está programada diariamente a las 11:00, America/Lima y
 market-data.json contiene fuente, fecha, mercado, etiqueta literal de variedad, valor por kg y página PDF en cada observación. Los documentos oficiales descargados se archivan en evidence/market-bulletins/ y evidence/reports/, con SHA-256 en sus metadatos. No editar esos originales para corregir una etiqueta ni rellenar filas ausentes.
 
 retail-data.json conserva 13 cotizaciones online observadas el 10/11/2026 de Tottus y Wong. Cada fila tiene fecha, nombre comercial, unidad, cálculo por kg solo cuando la ficha publica kg o peso explícito, estado de disponibilidad y enlace al retailer. El corte marca ubicación sin seleccionar; dos páginas Wong indicaban “Sin Stock”. El snapshot no lo edita tools/collect.py y no se renueva automáticamente.
+
+La vista `#guia` resume el uso de los cuatro paneles, resultados y límites. Política de IA: solo Codex o ChatGPT pueden ayudar a interpretar los datos. La aplicación no incorpora un chat ni los transmite automáticamente. No solicitar dirección exacta para consultar esta demo.
 
 Fuente resumen: colección MIDAGRI de boletines diarios GMML/MMF2. Frutas y bayas con mayor detalle: reportes diarios MMF2. En la demo, usar el vínculo de cada fila para revisar directamente el reporte específico. SDD/research-log.md mantiene la cobertura y las denominaciones verificadas.
 
