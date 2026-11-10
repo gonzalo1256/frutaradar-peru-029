@@ -1,0 +1,729 @@
+{
+  "audited_at": "2026-10-28T20:09:02.864306-05:00",
+  "method": "pdfplumber geometric tables vs pypdf layout parser",
+  "rows_checked": 72,
+  "sources_checked": 24,
+  "all_match": true,
+  "checks": [
+    {
+      "date": "2026-10-01",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 22.75,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.9479166666666666,
+      "volume_t": 181.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-01",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 24.5,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.3611111111111112,
+      "volume_t": 68.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-01",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 1.18,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 1.18,
+      "volume_t": 100.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-02",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 22.5,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.9375,
+      "volume_t": 164.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-02",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 24.0,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.3333333333333333,
+      "volume_t": 70.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-02",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 1.15,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 1.15,
+      "volume_t": 64.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-03",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 22.0,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.9166666666666666,
+      "volume_t": 186.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-03",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 23.75,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.3194444444444444,
+      "volume_t": 73.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-03",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 1.15,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 1.15,
+      "volume_t": 80.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-05",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 22.25,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.9270833333333334,
+      "volume_t": 146.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-05",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 24.5,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.3611111111111112,
+      "volume_t": 74.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-05",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 1.15,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 1.15,
+      "volume_t": 79.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-06",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 22.5,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.9375,
+      "volume_t": 168.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-06",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 24.75,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.375,
+      "volume_t": 59.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-06",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 1.15,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 1.15,
+      "volume_t": 50.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-07",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 21.5,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.8958333333333334,
+      "volume_t": 173.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-07",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 25.5,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.4166666666666667,
+      "volume_t": 64.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-07",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 1.1,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 1.1,
+      "volume_t": 76.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-08",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 21.0,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.875,
+      "volume_t": 178.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-08",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 25.75,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.4305555555555556,
+      "volume_t": 59.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-08",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 1.1,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 1.1,
+      "volume_t": 93.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-09",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 21.0,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.875,
+      "volume_t": 180.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-09",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 26.0,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.4444444444444444,
+      "volume_t": 59.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-09",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 1.13,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 1.13,
+      "volume_t": 102.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-10",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 21.25,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.8854166666666666,
+      "volume_t": 184.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-10",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 25.75,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.4305555555555556,
+      "volume_t": 84.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-10",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 1.05,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 1.05,
+      "volume_t": 110.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-12",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 21.75,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.90625,
+      "volume_t": 168.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-12",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 26.0,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.4444444444444444,
+      "volume_t": 68.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-12",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 1.0,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 1.0,
+      "volume_t": 89.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-13",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 22.5,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.9375,
+      "volume_t": 165.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-13",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 25.75,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.4305555555555556,
+      "volume_t": 58.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-13",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 1.0,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 1.0,
+      "volume_t": 81.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-14",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 22.75,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.9479166666666666,
+      "volume_t": 172.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-14",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 26.5,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.4722222222222223,
+      "volume_t": 43.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-14",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 0.98,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 0.98,
+      "volume_t": 52.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-15",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 22.75,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.9479166666666666,
+      "volume_t": 176.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-15",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 25.75,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.4305555555555556,
+      "volume_t": 76.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-15",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 0.95,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 0.95,
+      "volume_t": 114.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-16",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 23.5,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.9791666666666666,
+      "volume_t": 180.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-16",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 25.75,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.4305555555555556,
+      "volume_t": 70.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-16",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 0.93,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 0.93,
+      "volume_t": 72.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-17",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 23.75,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.9895833333333334,
+      "volume_t": 173.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-17",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 26.25,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.4583333333333333,
+      "volume_t": 67.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-17",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 0.93,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 0.93,
+      "volume_t": 112.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-19",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 23.5,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.9791666666666666,
+      "volume_t": 183.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-19",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 26.25,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.4583333333333333,
+      "volume_t": 67.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-19",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 0.93,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 0.93,
+      "volume_t": 87.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-20",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 22.75,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.9479166666666666,
+      "volume_t": 167.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-20",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 26.25,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.4583333333333333,
+      "volume_t": 70.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-20",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 0.95,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 0.95,
+      "volume_t": 58.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-21",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 23.25,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.96875,
+      "volume_t": 174.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-21",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 26.5,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.4722222222222223,
+      "volume_t": 55.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-21",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 1.0,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 1.0,
+      "volume_t": 84.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-22",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 22.25,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.9270833333333334,
+      "volume_t": 184.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-22",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 26.75,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.4861111111111112,
+      "volume_t": 69.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-22",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 0.95,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 0.95,
+      "volume_t": 71.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-23",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 22.5,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.9375,
+      "volume_t": 177.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-23",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 26.5,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.4722222222222223,
+      "volume_t": 76.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-23",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 0.93,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 0.93,
+      "volume_t": 107.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-24",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 22.25,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.9270833333333334,
+      "volume_t": 188.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-24",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 26.5,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.4722222222222223,
+      "volume_t": 86.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-24",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 0.93,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 0.93,
+      "volume_t": 82.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-26",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 21.5,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.8958333333333334,
+      "volume_t": 163.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-26",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 25.75,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.4305555555555556,
+      "volume_t": 72.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-26",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 0.93,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 0.93,
+      "volume_t": 98.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-27",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 21.5,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.8958333333333334,
+      "volume_t": 188.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-27",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 25.75,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.4305555555555556,
+      "volume_t": 66.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-27",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 0.95,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 0.95,
+      "volume_t": 52.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-28",
+      "fruit": "naranja",
+      "page": 2,
+      "raw_price_pen": 21.5,
+      "equivalent_kg": 24.0,
+      "price_pen_per_kg": 0.8958333333333334,
+      "volume_t": 161.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-28",
+      "fruit": "platano",
+      "page": 3,
+      "raw_price_pen": 26.5,
+      "equivalent_kg": 18.0,
+      "price_pen_per_kg": 1.4722222222222223,
+      "volume_t": 77.0,
+      "match": true
+    },
+    {
+      "date": "2026-10-28",
+      "fruit": "sandia",
+      "page": 3,
+      "raw_price_pen": 0.98,
+      "equivalent_kg": 1.0,
+      "price_pen_per_kg": 0.98,
+      "volume_t": 108.0,
+      "match": true
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "last_run_at": "2026-11-10T09:17:23.519008-05:00",
+  "run_status": "success",
+  "last_success_at": "2026-11-10T09:17:34.163407-05:00",
+  "last_data_change_at": "2026-11-09T12:21:04.999406-05:00",
+  "latest_data_date": "2026-11-09",
+  "observations": 78,
+  "sources": 26,
+  "changed": false,
+  "consecutive_failures": 0,
+  "data_age_days": 1,
+  "stale": false,
+  "error": null,
+  "market_data_last_success_at": "2026-11-10T09:17:46.453539-05:00",
+  "market_data_latest_report_date": "2026-11-09",
+  "market_data_observations": 2440,
+  "market_data_sources": 27,
+  "market_data_failures": [],
+  "market_data_stale": false
+}

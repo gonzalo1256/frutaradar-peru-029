@@ -1,0 +1,679 @@
+{
+  "version": 1,
+  "collected_at": "2026-10-28T14:16:23.745663-05:00",
+  "scope": "Lima / Mercado Mayorista de Frutas N.º 2, La Victoria",
+  "sources": [
+    {
+      "id": "midagri-20260302",
+      "date": "2026-03-02",
+      "date_text": "2 de marzo de 2026",
+      "url": "https://www.gob.pe/institucion/midagri/noticias/1360406-midagri-abastecimiento-de-alimentos-a-mercados-llega-a-casi-a-10-mil-toneladas-con-ofertas-de-productos",
+      "title": "MIDAGRI: abastecimiento de alimentos a mercados llega a casi a 10 mil toneladas con ofertas de productos - Noticias - Ministerio de Desarrollo Agrario y Riego - Plataforma del Estado Peruano",
+      "retrieved_at": "2026-10-28T14:16:23.745663-05:00",
+      "http_status": 200,
+      "sha256": "710fec5ec19461561a384ef033147100d16f8291926d10ec463e353ae118b38b",
+      "method": "direct-http-html",
+      "excerpts": [
+        "naranja valencia a S/ 1.77 soles kilogramo; papaya a S/ ",
+        "sandía a S/ 0.83 soles kilogramo; plátano bizc",
+        "plátano bizcocho a S/ 1.28 soles kilogramo; melón coquit"
+      ]
+    },
+    {
+      "id": "midagri-20260309",
+      "date": "2026-03-09",
+      "date_text": "9 de marzo de 2026",
+      "url": "https://www.gob.pe/institucion/midagri/noticias/1363104-midagri-suministro-de-alimentos-a-mercados-mayoristas-alcanza-casi-10-mil-toneladas-con-diversas-ofertas-de-productos",
+      "title": "Midagri: suministro de alimentos a mercados mayoristas alcanza casi 10 mil toneladas con diversas ofertas de productos - Noticias - Ministerio de Desarrollo Agrario y Riego - Plataforma del Estado Peruano",
+      "retrieved_at": "2026-10-28T14:16:23.745663-05:00",
+      "http_status": 200,
+      "sha256": "62c7760684488d884adc162721c1be52016db96b2e1171a3e5e2db254edeea82",
+      "method": "direct-http-html",
+      "excerpts": [
+        "naranja Valencia a S/ 1.85; papaya a S/ 2.06; plátano be",
+        "sandía a S/ 0.80 por kilogramo; melón coquito "
+      ]
+    },
+    {
+      "id": "midagri-20260311",
+      "date": "2026-03-11",
+      "date_text": "11 de marzo de 2026",
+      "url": "https://www.gob.pe/institucion/midagri/noticias/1364305-midagri-mercados-mayoristas-registran-abastecimiento-normal-y-mayor-oferta-de-frutas-y-tuberculos",
+      "title": "MIDAGRI: mercados mayoristas registran abastecimiento normal y más oferta de frutas y tubérculos - Noticias - Ministerio de Desarrollo Agrario y Riego - Plataforma del Estado Peruano",
+      "retrieved_at": "2026-10-28T14:16:23.745663-05:00",
+      "http_status": 200,
+      "sha256": "3798d5b9b23dcca6409ec24e99ed86863f710552ff5d502526c30fc3bfad2f9f",
+      "method": "direct-http-html",
+      "excerpts": [
+        "naranja Valencia a S/ 1.89 soles kilogramo; papaya a S/ ",
+        "sandía a S/ 0.85 céntimos kilogramo; melón coq"
+      ]
+    },
+    {
+      "id": "midagri-20260313",
+      "date": "2026-03-13",
+      "date_text": "13 de marzo de 2026",
+      "url": "https://www.gob.pe/institucion/midagri/noticias/1365388-midagri-mercados-mayoristas-reportan-abastecimiento-normal-y-precios-accesibles",
+      "title": "MIDAGRI: mercados mayoristas reportan abastecimiento normal y precios accesibles. - Noticias - Ministerio de Desarrollo Agrario y Riego - Plataforma del Estado Peruano",
+      "retrieved_at": "2026-10-28T14:16:23.745663-05:00",
+      "http_status": 200,
+      "sha256": "e7656f438930688e240d6decdf9e2f0bf0d8f2b43a58dfa98de5c7101a6f94a8",
+      "method": "direct-http-html",
+      "excerpts": [
+        "naranja Valencia a S/ 1.85; papaya a S/ 1.92; manzana de",
+        "sandía a S/ 0.88 el kilogramo; melón coquito a",
+        "plátano bizcocho a S/ 1.40; manzana corriente a S/ 1.41;"
+      ]
+    },
+    {
+      "id": "midagri-20260316",
+      "date": "2026-03-16",
+      "date_text": "16 de marzo de 2026",
+      "url": "https://www.gob.pe/institucion/midagri/noticias/1366239-midagri-abastecimiento-en-mercados-mayoristas-alcanza-casi-10-mil-toneladas-con-ofertas-en-tuberculos-y-verduras",
+      "title": "MIDAGRI: abastecimiento en mercados mayoristas alcanza casi 10 mil toneladas con ofertas en tubérculos y verduras - Noticias - Ministerio de Desarrollo Agrario y Riego - Plataforma del Estado Peruano",
+      "retrieved_at": "2026-10-28T14:16:23.745663-05:00",
+      "http_status": 200,
+      "sha256": "bd61a719b42a5937c56c15c35ab806d89b87bf0f0eae799441ccc3a03191711b",
+      "method": "direct-http-html",
+      "excerpts": [
+        "naranja valencia a S/ 1.81 soles kilogramo; manzana Isra",
+        "sandía a S/ 0.88 soles kilogramo; melón coquit",
+        "plátano bizcocho a S/ 1.36 soles kilogramo; manzana corr"
+      ]
+    },
+    {
+      "id": "midagri-20260318",
+      "date": "2026-03-18",
+      "date_text": "18 de marzo de 2026",
+      "url": "https://www.gob.pe/institucion/midagri/noticias/1367567-midagri-mas-abastecimiento-en-mercados-mayoristas-con-productos-al-alcance-de-comerciantes-y-consumidores",
+      "title": "MIDAGRI: más abastecimiento en mercados mayoristas con productos al alcance de comerciantes y consumidores - Noticias - Ministerio de Desarrollo Agrario y Riego - Plataforma del Estado Peruano",
+      "retrieved_at": "2026-10-28T14:16:23.745663-05:00",
+      "http_status": 200,
+      "sha256": "f10f75f439a1e1a32e0b5e337f3ff7e8916319803070727c9c86189d01c8d7f4",
+      "method": "direct-http-html",
+      "excerpts": [
+        "naranja valencia a S/ 1.77 soles kilogramo; manzana Isra",
+        "sandía a S/ 0.88 soles kilogramo; melón coquit",
+        "plátano bizcocho a S/ 1.36 soles kilogramo; manzana corr"
+      ]
+    },
+    {
+      "id": "midagri-20260319",
+      "date": "2026-03-19",
+      "date_text": "19 de marzo de 2026",
+      "url": "https://www.gob.pe/institucion/midagri/noticias/1367999-midagri-hoy-ingresaron-mas-de-12-mil-toneladas-a-los-mercados-mayoristas-de-lima",
+      "title": "MIDAGRI: Hoy ingresaron más de 12 mil toneladas a los mercados mayoristas de Lima - Noticias - Ministerio de Desarrollo Agrario y Riego - Plataforma del Estado Peruano",
+      "retrieved_at": "2026-10-28T14:16:23.745663-05:00",
+      "http_status": 200,
+      "sha256": "00f72b2bffffae2a9f4d261a18809dac0b86309b1fd6e163bbdc4770c924346a",
+      "method": "direct-http-html",
+      "excerpts": [
+        "naranja valencia a S/ 1.75 soles kilogramo; papaya a S/ ",
+        "sandía a S/ 0.88 soles kilogramo; melón coquit",
+        "plátano bizcocho a S/ 1.33 soles kilogramo; manzana corr"
+      ]
+    },
+    {
+      "id": "midagri-20260320",
+      "date": "2026-03-20",
+      "date_text": "20 de marzo de 2026",
+      "url": "https://www.gob.pe/institucion/midagri/noticias/1368473-midagri-cerca-de-10-mil-toneladas-de-frutas-y-tuberculos-abastecen-los-mercados",
+      "title": "MIDAGRI: Cerca de 10 mil toneladas de frutas y tubérculos abastecen los mercados - Noticias - Ministerio de Desarrollo Agrario y Riego - Plataforma del Estado Peruano",
+      "retrieved_at": "2026-10-28T14:16:23.745663-05:00",
+      "http_status": 200,
+      "sha256": "0fe1409f35e9c8a629886b7c385d6af74925fccb96d3ba275c474d1dfcb76580",
+      "method": "direct-http-html",
+      "excerpts": [
+        "naranja valencia a S/ 1.74 soles kilogramo; papaya a S/ ",
+        "sandía a S/ 0.85 soles kilogramo; melón coquit",
+        "plátano bizcocho a S/ 1.36 soles kilogramo; manzana corr"
+      ]
+    },
+    {
+      "id": "midagri-20260324",
+      "date": "2026-03-24",
+      "date_text": "24 de marzo de 2026",
+      "url": "https://www.gob.pe/institucion/midagri/noticias/1370008-midagri-abastecimiento-de-mas-de-11-mil-toneladas-en-mercados-mayoristas-garantiza-precios-accesibles",
+      "title": "MIDAGRI: abastecimiento de más de 11 mil toneladas en mercados mayoristas garantiza precios accesibles - Noticias - Ministerio de Desarrollo Agrario y Riego - Plataforma del Estado Peruano",
+      "retrieved_at": "2026-10-28T14:16:23.745663-05:00",
+      "http_status": 200,
+      "sha256": "f58545ee30d52f4a31a26ef6382061c712e5fd44ce6d8f7388edd55e613c2213",
+      "method": "direct-http-html",
+      "excerpts": [
+        "naranja valencia a S/ 1.77 soles kilogramo; papaya a S/ ",
+        "sandía a S/ 0.83 soles kilogramo; melón coquit",
+        "plátano bizcocho a S/ 1.43 soles kilogramo; manzana corr"
+      ]
+    },
+    {
+      "id": "midagri-20260325",
+      "date": "2026-03-25",
+      "date_text": "25 de marzo de 2026",
+      "url": "https://www.gob.pe/institucion/midagri/noticias/1370473-midagri-mercados-mayoristas-de-lima-registran-mayor-abastecimiento-de-frutas-y-hortalizas",
+      "title": "MIDAGRI: mercados mayoristas de Lima registran mayor abastecimiento de frutas y hortalizas - Noticias - Ministerio de Desarrollo Agrario y Riego - Plataforma del Estado Peruano",
+      "retrieved_at": "2026-10-28T14:16:23.745663-05:00",
+      "http_status": 200,
+      "sha256": "0077a92df945952969cc50686a88e6dac5652e620a7a27f759ca60c3da6dbb1a",
+      "method": "direct-http-html",
+      "excerpts": [
+        "naranja valencia a S/ 1.78 soles kilogramo; palta crioll",
+        "sandía a S/ 0.83 soles kilogramo; melón coquit",
+        "plátano bizcocho a S/ 1.46 soles kilogramo; naranja vale"
+      ]
+    },
+    {
+      "id": "midagri-20260330",
+      "date": "2026-03-30",
+      "date_text": "30 de marzo de 2026",
+      "url": "https://www.gob.pe/institucion/midagri/noticias/1372551-mercados-mayoristas-de-lima-reportan-buen-abastecimiento-de-alimentos-al-inicio-de-la-semana",
+      "title": "Mercados mayoristas de Lima reportan buen abastecimiento de alimentos al inicio de la semana - Noticias - Ministerio de Desarrollo Agrario y Riego - Plataforma del Estado Peruano",
+      "retrieved_at": "2026-10-28T14:16:23.745663-05:00",
+      "http_status": 200,
+      "sha256": "9b68e4c4324bb0bf88e405f6fa96b753341f4990bae1708496922455519d3bfe",
+      "method": "direct-http-html",
+      "excerpts": [
+        "naranja valencia (S/ 1.73/kg), papaya (S/ 1.92/kg), man",
+        "sandía (S/ 0.80/kg), melón coquito (S/ 1.21/k",
+        "plátano bizcocho (S/ 1.44/kg), manzana corriente (S/ 1."
+      ]
+    },
+    {
+      "id": "midagri-20261020",
+      "date": "2026-10-20",
+      "date_text": "20 de octubre de 2026",
+      "market_volume_t": 2405,
+      "url": "https://www.gob.pe/institucion/midagri/noticias/1459504-midagri-mercados-mayoristas-de-lima-recibieron-mas-de-10-mil-toneladas-de-alimentos-este-martes",
+      "title": "MIDAGRI: Mercados mayoristas de Lima recibieron más de 10 mil toneladas de alimentos este martes - Noticias - Ministerio de Desarrollo Agrario y Riego - Plataforma del Estado Peruano",
+      "retrieved_at": "2026-10-28T14:16:23.745663-05:00",
+      "http_status": 200,
+      "sha256": "4a9f21e8183f53e455d31ed9345f0d7913c5a463ecec1cd23e02bae84ea4bd73",
+      "method": "direct-http-html",
+      "excerpts": [
+        "naranja Valencia de S/ 0.98 por kilogramo y el plátano bi",
+        "sandía registró un precio mayorista promedio de S/ 0.93 por kilogramo, la naranja Val",
+        "plátano bizcocho de S/ 1.46 por kilogramo. Los precios co"
+      ]
+    },
+    {
+      "id": "midagri-20261027",
+      "date": "2026-10-27",
+      "date_text": "27 de octubre de 2026",
+      "market_volume_t": 2413,
+      "url": "https://www.gob.pe/institucion/midagri/noticias/1463022-midagri-informa-sobre-precios-de-frutas-y-verduras-en-los-mercados-mayoristas-de-lima",
+      "title": "MIDAGRI informa sobre precios de frutas y verduras en los mercados mayoristas de Lima - Noticias - Ministerio de Desarrollo Agrario y Riego - Plataforma del Estado Peruano",
+      "retrieved_at": "2026-10-28T14:16:23.745663-05:00",
+      "http_status": 200,
+      "sha256": "6cc16753a5a6df13116f39ecd9ab88fa513d9db1e45469ea2fffb7338a452600",
+      "method": "direct-http-html",
+      "excerpts": [
+        "La naranja valencia, la sandía y el plátano bizcocho, registraron precios de S/ 0,90, S/ 0,95 y S/ 1,43 por kilogramo, respectivamente",
+        "La naranja valencia, la sandía y el plátano bizcocho, registraron precios de S/ 0,90, S/ 0,95 y S/ 1,43 por kilogramo, respectivamente",
+        "La naranja valencia, la sandía y el plátano bizcocho, registraron precios de S/ 0,90, S/ 0,95 y S/ 1,43 por kilogramo, respectivamente"
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "date": "2026-03-02",
+      "fruit": "naranja",
+      "price": 1.77,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260302",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-02",
+      "fruit": "sandia",
+      "price": 0.83,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260302",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-02",
+      "fruit": "platano",
+      "price": 1.28,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260302",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-09",
+      "fruit": "naranja",
+      "price": 1.85,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260309",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-09",
+      "fruit": "sandia",
+      "price": 0.8,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260309",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-11",
+      "fruit": "naranja",
+      "price": 1.89,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260311",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-11",
+      "fruit": "sandia",
+      "price": 0.85,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260311",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-13",
+      "fruit": "naranja",
+      "price": 1.85,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260313",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-13",
+      "fruit": "sandia",
+      "price": 0.88,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260313",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-13",
+      "fruit": "platano",
+      "price": 1.4,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260313",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-16",
+      "fruit": "naranja",
+      "price": 1.81,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260316",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-16",
+      "fruit": "sandia",
+      "price": 0.88,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260316",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-16",
+      "fruit": "platano",
+      "price": 1.36,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260316",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-18",
+      "fruit": "naranja",
+      "price": 1.77,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260318",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-18",
+      "fruit": "sandia",
+      "price": 0.88,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260318",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-18",
+      "fruit": "platano",
+      "price": 1.36,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260318",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-19",
+      "fruit": "naranja",
+      "price": 1.75,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260319",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-19",
+      "fruit": "sandia",
+      "price": 0.88,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260319",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-19",
+      "fruit": "platano",
+      "price": 1.33,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260319",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-20",
+      "fruit": "naranja",
+      "price": 1.74,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260320",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-20",
+      "fruit": "sandia",
+      "price": 0.85,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260320",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-20",
+      "fruit": "platano",
+      "price": 1.36,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260320",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-24",
+      "fruit": "naranja",
+      "price": 1.77,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260324",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-24",
+      "fruit": "sandia",
+      "price": 0.83,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260324",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-24",
+      "fruit": "platano",
+      "price": 1.43,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260324",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-25",
+      "fruit": "naranja",
+      "price": 1.78,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260325",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-25",
+      "fruit": "sandia",
+      "price": 0.83,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260325",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-25",
+      "fruit": "platano",
+      "price": 1.46,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260325",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-30",
+      "fruit": "naranja",
+      "price": 1.73,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260330",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-30",
+      "fruit": "sandia",
+      "price": 0.8,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260330",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-03-30",
+      "fruit": "platano",
+      "price": 1.44,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20260330",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-10-20",
+      "fruit": "naranja",
+      "price": 0.98,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "primera",
+      "source_id": "midagri-20261020",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-10-20",
+      "fruit": "sandia",
+      "price": 0.93,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "primera",
+      "source_id": "midagri-20261020",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-10-20",
+      "fruit": "platano",
+      "price": 1.46,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "primera",
+      "source_id": "midagri-20261020",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-10-27",
+      "fruit": "naranja",
+      "price": 0.9,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20261027",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-10-27",
+      "fruit": "sandia",
+      "price": 0.95,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20261027",
+      "volume_t": null,
+      "origin": null
+    },
+    {
+      "date": "2026-10-27",
+      "fruit": "platano",
+      "price": 1.43,
+      "unit": "PEN/kg",
+      "market": "MMF2",
+      "level": "mayorista",
+      "quality": "no declarada",
+      "source_id": "midagri-20261027",
+      "volume_t": null,
+      "origin": null
+    }
+  ],
+  "market_supply": [
+    {
+      "date": "2026-10-20",
+      "market": "MMF2",
+      "volume_t": 2405,
+      "scope": "todas las frutas",
+      "source_id": "midagri-20261020"
+    },
+    {
+      "date": "2026-10-27",
+      "market": "MMF2",
+      "volume_t": 2413,
+      "scope": "todas las frutas",
+      "source_id": "midagri-20261027"
+    }
+  ],
+  "alerts": [],
+  "alerts_status": "Sin consulta de eventos vigentes; no equivale a ausencia de riesgos."
+}

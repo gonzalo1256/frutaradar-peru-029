@@ -1,0 +1,184 @@
+<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SDD · FrutaRadar Perú 029</title><link rel="stylesheet" href="../../style.css"><main class="doc" style="max-width:1000px;margin:35px auto;padding:25px"><a href="../../">← Demo #029</a><p class="eyebrow">ATLAS / 029 / SPECIFICATION DRIVEN DEVELOPMENT</p><h1>FrutaRadar Perú</h1><p>Peru Fruit Radar · v0.3 · 10 noviembre 2026 · Canasta mayorista con fuentes oficiales trazables.</p><nav aria-label="Documentos SDD"><a href="#product-spec">Especificación del producto · v0.3</a><a href="#research-log">Investigación y evidencia real · corte 10/11/2026</a><a href="#architecture">Arquitectura y decisiones · v0.3</a><a href="#challenger">Revisión crítica · v0.3</a><a href="#backlog">Plan y estado de implementación · v0.3</a><a href="#acceptance">Criterios de aceptación y trazabilidad · v0.3</a><a href="#validation">Validación de la entrega · v0.3</a><a href="#handoff">Traspaso y operación · v0.3</a></nav><section id="product-spec"><a href="product-spec.md">Fuente Markdown</a><h2>Especificación del producto · v0.3</h2>
+<p>FrutaRadar Perú / Peru Fruit Radar · #029 · 10/11/2026 · America/Lima. Demo local con cobertura real ampliada por MIDAGRI. Aceptación humana y utilidad predictiva pendientes.</p>
+<h3>Necesidad y alcance</h3>
+<p>Una persona que compra alimentos en Lima necesita consultar precios mayoristas por producto y variedad, y distinguir el dato observado de temporada, calidad, origen y ruta que aún no se conoce. Una cosecha abundante no garantiza precio bajo en destino.</p>
+<p>Mercados observados: Gran Mercado Mayorista de Lima (GMML) y Mercado Mayorista de Frutas N.º 2 (MMF2). La canasta contempla frutas, verduras, tubérculos y raíces habituales, además de sugerencias. El catálogo contiene 43 opciones; 34 tienen observaciones de precio y 9 quedan visibles como sugerencia o atributo no confirmado. El último corte incorporado en esta edición es 9/11/2026.</p>
+<h3>Requisitos implementados</h3>
+<ul>
+<li>FR01: conservar fecha observada, mercado, rótulo oficial de producto y variedad, valor PEN/kg, página y URL del PDF fuente.</li>
+<li>FR02: comparar por fecha, categoría, producto y denominación exacta de variedad; mostrar precio GMML, precio MMF2 y diferencia cuando ambos existen. Un mercado ausente se representa como “—”.</li>
+<li>FR03: filtros por categoría, producto, variedad, mercado y fecha; la fecha inicial selecciona la publicación más reciente presente en el dataset.</li>
+<li>FR04: precio por kilogramo visible por observación. Precios de envase solo se convierten si el reporte declara equivalencia en kg; no se deduce el peso por costumbre.</li>
+<li>FR05: incluir fresas, bayas y variedades de frutas que aparecen en los reportes detallados de MMF2 y las etiquetas diarias GMML/MMF2.</li>
+<li>FR06: mantener a la vista los productos sugeridos sin precio comprobado y los atributos solicitados que la fuente no declara. No heredar precio de un producto parecido.</li>
+<li>FR07: cada fila ofrece vínculo a la fuente oficial y número de página. La página de Fuentes conserva fechas, estado HTTP y huella SHA-256 de PDF archivados localmente.</li>
+<li>FR08: el recolector revisa los índices y páginas mensuales oficiales, valida fecha, estructura, unidad y etiqueta del producto, y conserva la última canasta válida si falla.</li>
+<li>FR09: actualizar el histórico anterior de MMF2 y la canasta multi-mercado con la tarea diaria de este chat, manteniendo su horario de las 11:00 de America/Lima.</li>
+<li>FR10: exponer fecha más reciente, conteos, mercados y límites de cobertura en UI y SDD.</li>
+</ul>
+<h3>Catálogo y resolución varietal</h3>
+<p>Con observaciones: mandarina, papaya, arándano, zarzamora/mora, uva, piña, manzana, fresa, plátano, sandía, palta, limón, naranja, mango, granadilla, maracuyá, pera, chirimoya, tomate, cebolla, zanahoria, lechuga, pepino, brócoli, coliflor, espinaca, zapallo, choclo/maíz, betarraga, papa, camote, yuca, olluco y kion.</p>
+<p>Sugerencias visibles sin precio comparable en los reportes revisados: arveja verde, ajo, acelga, perejil y culantro. Atributos separados sin precio asignado: mandarina sin pepa, uva verde sin pepa, manzana verde chilena y pepino rayado/melón.</p>
+<p>Los rótulos verifican algunas variedades específicas: Piña Golden; Manzana Importada (Chilena); Palta Fuerte Costa; Plátano Bizcocho, Isla, Manzano y Seda; fresa Sabrina y San Andreas; betarraga Criolla/Serrana; y kion Costa/Selva. Los reportes describen mandarina Malvacea, Satsuma Costa y Tangerina, pero no mencionan pepa. “Uva Rosada Sin Pepa” declara sin pepa, sin declarar verde. “Manzana Importada (Chilena)” identifica origen comercial, no color. Por ello la UI conserva estas solicitudes como atributos pendientes, sin asociarles un precio de la familia.</p>
+<h3>Política de interpretación</h3>
+<p>La comparación por kg homologa unidad publicada, no calidad, tamaño, empaque, origen agrícola, flete, merma ni margen minorista. Se comparan mercados solo cuando coinciden fecha, familia y texto de variedad. No se mezclan días ni nombres aproximados.</p>
+<p>No se predice baja de precios ni se activa recomendación de compra. Sin disponibilidad, calibrado, calidad declarada, ruta y costos de destino, la demo es una consulta trazable de mayorista, no un precio garantizado para el hogar. Un dato de más de dos días se marca desactualizado por política operativa.</p>
+<h3>Éxito y siguiente evaluación</h3>
+<p>La demo aporta valor si una persona puede filtrar su producto y variedad, identificar fecha y mercado, abrir la fuente y distinguir un precio observado de un atributo sin validar. Próxima evaluación: revisar con hogares de Lima si los filtros y la comparación son comprensibles antes de diseñar alertas o pronóstico.</p></section><section id="research-log"><a href="research-log.md">Fuente Markdown</a><h2>Investigación y evidencia real · corte 10/11/2026</h2>
+<h3>Fuentes primarias</h3>
+<p>1. <a href="https://www.gob.pe/institucion/midagri/colecciones/338-boletin-de-abastecimiento-y-precios-en-el-mercado-mayorista-de-lima-gmml-y-mercado-de-frutas-n-2-mm-n-2">MIDAGRI · colección diaria de precios y abastecimiento GMML/MMF2</a>. El boletín conjunto publica tablas por día para el Gran Mercado Mayorista de Lima (GMML) y el Mercado Mayorista de Frutas N.º 2 (MMF2), incluidos productos frescos, rótulos de variedad, precio y fecha.</p>
+<p>2. <a href="https://www.gob.pe/institucion/midagri/informes-publicaciones/8666165-reporte-de-ingreso-y-precios-en-el-mercado-mayorista-de-frutas-mmf-n-2-octubre-2026">MIDAGRI · reporte de ingreso y precios MMF2, octubre de 2026</a>. Los reportes detallados de frutas identifican bayas y variedades que no aparecen como filas separadas en la tabla resumida conjunta y publican equivalencia de empaque cuando corresponde.</p>
+<p>3. <a href="https://www.gob.pe/institucion/midagri/informes-publicaciones/8780082-boletin-de-abastecimiento-y-precios-mayoristas-en-el-mercado-mayorista-de-lima-gmml-y-mercado-de-frutas-n-2-mm-n-2-noviembre-2026">MIDAGRI · boletín GMML/MMF2, noviembre de 2026</a>. La publicación mensual enlaza los boletines diarios usados en el corte actual.</p>
+<p>En la demo, cada observación abre el PDF oficial concreto y señala la página. El recolector conserva localmente los PDF utilizados con URL, fecha, estado HTTP y SHA-256. Los enlaces oficiales visibles en el registro son la evidencia primaria; las copias archivadas permiten repetir el parseo.</p>
+<h3>Cobertura comprobada</h3>
+<p>La canasta reúne 2.440 observaciones de 27 fuentes y 43 opciones catalogadas. En el corte del 10/11/2026, el último boletín disponible en el dataset corresponde al 9/11/2026. Hay 34 familias con precio observado y 9 sugerencias/atributos pendientes. La mayoría de productos GMML procede de tablas con precio directo por kg; las conversiones de MMF2 solo se realizan con el peso explícito que figura en la fuente.</p>
+<p>Frutas: mandarina, papaya, arándano, zarzamora/mora, uva, piña, manzana, fresa, plátano, sandía, palta, limón, naranja, mango, granadilla, maracuyá, pera y chirimoya. Verduras y hortalizas: tomate, cebolla, zanahoria, lechuga, pepino, brócoli, coliflor, espinaca, zapallo, choclo/maíz y betarraga. Tubérculos/raíces y condimentos: papa, camote, yuca, olluco y kion. Sugerencias de canasta sin precio comparable hallado: arveja verde, ajo, acelga, perejil y culantro.</p>
+<p>La fuente confirma algunos rótulos específicos:</p>
+<ul>
+<li>Mandarina Malvacea, Satsuma (Costa) y Tangerina; ninguno declara “sin pepa”.</li>
+<li>Uva Rosada Sin Pepa confirma el atributo sin pepa, pero el color verde no está indicado. Uva Thompson aparece con ese rótulo sin declarar color ni pepa.</li>
+<li>Manzana Importada (Chilena) identifica importación desde Chile, pero no declara que sea verde.</li>
+<li>Piña Golden; Palta Fuerte Costa.</li>
+<li>Plátano Bizcocho (Selva), Isla (Selva), Manzano (Selva), Seda (Selva) y Seda Congo.</li>
+<li>Fresa Sabrina y San Andreas en reportes detallados.</li>
+<li>Beterraga (Criolla/Serrana), Espinaca (Criolla/Serrana), Coliflor (Criolla/Serrana) y Kion (Costa/Selva).</li>
+</ul>
+<p>La demo deja “Mandarina sin pepa”, “Uva verde sin pepa” y “Manzana verde chilena” en el selector, con su nota y sin precio asignado. La fuente resumida para pepino dice “Pepino rayado o melón”; por eso el catálogo también distingue esa etiqueta de pepino genérico. La etiqueta literal se preserva; no se extrapola un precio a un atributo ausente.</p>
+<h3>Lectura de precios</h3>
+<p>Las observaciones actuales se concentran en MMF2 y GMML y no constituyen una muestra simultánea para todos los productos. La tabla de comparación alinea la misma fecha, familia y variedad exacta; una celda “—” significa que ese mercado no publicó una fila coincidente, no que su precio sea cero. Las diferencias tampoco ajustan calidad, calibre, origen, envase, flete, merma o margen minorista.</p>
+<p>Ejemplos de la publicación del 9/11/2026: Arándano, S/ 12,75/kg en MMF2; Zarzamora/Mora, S/ 26,25/kg en MMF2; Beterraga (Criolla/Serrana), S/ 4,27/kg en GMML; Espinaca (Criolla/Serrana), S/ 3,38/kg en GMML; Coliflor (Criolla/Serrana), S/ 1,04/kg en GMML; Kion (Costa/Selva), S/ 3,88/kg en GMML. La tabla permite abrir cada fuente y confirmar su fecha y mercado.</p>
+<h3>Cobertura y decisiones pendientes</h3>
+<p>El precio observado no informa por sí solo abundancia de cosecha, ruta a Lima o precio final en un hogar. Continúan pendientes la calidad/calibre comparable, procedencia de lotes, costos de transporte, alertas relevantes enlazadas a rutas y evaluación con usuarios. No se activa predicción ni recomendación de compra.</p></section><section id="architecture"><a href="architecture.md">Fuente Markdown</a><h2>Arquitectura y decisiones · v0.3</h2>
+<h3>ADR-001 · Demo estática y archivos de datos</h3>
+<p>La ruta local de Atlas 4180 se conserva. El navegador lee data.json, market-data.json, status.json y automation.json; la pantalla nunca descarga o interpreta reportes desde la sesión del usuario. El recolector corre por separado en el equipo disponible para la automatización.</p>
+<p>data.json conserva el histórico detallado original de MMF2 para el radar de frutas, con valores por envase, equivalencia, volumen y calidad desconocida cuando aplica. market-data.json añade la canasta filtrable GMML/MMF2, manteniendo cada mercado, rótulo literal de variedad, fecha de observación, precio PEN/kg, URL y página fuente. No se mezclan ambas estructuras en una serie que oculte nivel o unidad.</p>
+<h3>ADR-002 · Fuentes oficiales y descubrimiento</h3>
+<p>El catálogo MIDAGRI publica índices de boletines conjuntos para GMML y MMF2. El recolector revisa los índices mensual y diario recientes, elige un PDF oficial accesible y valida firma, páginas, fecha y tablas de la publicación. Los reportes diarios detallados MMF2 descubiertos desde la colección de precios se usan para completar frutas, bayas y variedades separadas.</p>
+<p>Solo se aceptan URL HTTPS de dominios oficiales identificados por el recolector. El precio se captura de las celdas del día observado, nunca de medias semanales. Las conversiones de empaque de MMF2 requieren que peso y unidad estén escritos en el mismo reporte. Los artículos de prensa anteriores permanecen archivados en press-archive.json, fuera de la serie principal.</p>
+<h3>ADR-003 · Contrato de canasta</h3>
+<p>Cada observación identifica fecha, categoría, product_id, nombre de producto, rótulo de variedad, mercado, nombre de mercado, precio por kg, URL y página del PDF, fecha de fuente, unidad/conversión declarada y calidad si se publica. Una denominación sin equivalencia explícita mantiene “no declarada”; no se hereda calidad ni atributos por semejanza.</p>
+<p>El catálogo guarda cobertura como precio observado, sin precio en fuente o atributo no confirmado. Productos sugeridos quedan seleccionables con explicación de falta de precio. Variantes solicitadas que no están verificadas no reciben observaciones por herencia de la familia.</p>
+<h3>ADR-004 · Comparación por fecha y etiqueta</h3>
+<p>Los filtros se encadenan por categoría, producto, variedad, mercado y fecha. La tabla alinea observaciones que coinciden en fecha, familia y texto exacto de variedad. GMML y MMF2 conservan columnas independientes; si un mercado no publicó una fila coincidente se muestra “—”. La diferencia aparece solo cuando ambos precios existen.</p>
+<p>La comparación es una lectura de precios mayoristas publicados. No normaliza calidad, tamaño, origen, condiciones de empaque, flete, merma ni venta minorista. Sin esas dimensiones no constituye una recomendación de sustitución o compra.</p>
+<h3>ADR-005 · Integridad, estado y recuperación</h3>
+<p>El recolector valida documento, fecha, columnas, producto exacto, unidades y valores positivos antes de promover el nuevo market-data.json. Escritura temporal y reemplazo mantienen la última copia buena si una descarga o parseo falla. status.json distingue estado, fallos y última fecha del histórico de frutas y de la canasta multi-mercado. Un fallo no convierte una cifra antigua en actual.</p>
+<p>Los PDF de cada descarga quedan archivados con SHA-256, fecha, URL, estado HTTP y página. Un documento corregido produce una huella distinta; no se reemplaza evidencia anterior para ocultar cambios.</p>
+<h3>ADR-006 · Ingesta diaria</h3>
+<p>La automatización nativa de este chat corre tools/collect.py diariamente a las 11:00 de America/Lima. El punto de entrada ejecuta el recolector MMF2 anterior y, si termina correctamente, tools/collect_markets.py. Requiere equipo y Codex disponibles; el inicio real puede retrasarse si el chat está ocupado.</p>
+<p>Un dato de más de dos días o tres fallos seguidos requiere atención. Un éxito sin datos nuevos conserva la copia válida y no es por sí solo un error. No se cambió el horario ni se añadió una tarea duplicada.</p>
+<h3>Límites</h3>
+<p>No hay predicción, sugerencia de compra, precio minorista, climatología o bloqueo de ruta unido a una observación. Los datos no declaran calidad homogénea. UI y exportación deben mantener la fecha y el mercado junto a cada precio.</p></section><section id="challenger"><a href="challenger.md">Fuente Markdown</a><h2>Revisión crítica · v0.3</h2>
+<p>Revisión propia estructurada; no auditoría independiente por otro agente. La comprobación por dos extractores de PDF sí es independiente a nivel de método de lectura, no de autoría del software.</p>
+<ul>
+<li>Un precio por jaba/cajón podía confundirse con S/kg: se conservan precio original y peso publicado por fila; conversión explícita y cálculo sin redondeo previo.</li>
+<li>Los reportes mezclan Hoy, Ayer y promedios: solo Hoy origina registros diarios. Dos extractores con métodos diferentes contrastan las columnas.</li>
+<li>Prensa y reporte del mismo día pueden discrepar: dos diferencias reales del 20/10 quedan visibles y archivadas; el histórico usa uniformemente PDF diario sin afirmar causa del desacuerdo.</li>
+<li>Tener 24 días no prueba homogeneidad: calidad no declarada sigue bloqueando mediana y recomendación. El umbral no se rebaja para mostrar una señal.</li>
+<li>Más ingreso de una fruta no demuestra precio futuro: volumen se presenta como observación, separado de causalidad y riesgos.</li>
+<li>Calendario genérico de plátano no acredita bizcocho ni campaña actual: alcance y año de guía visibles; dos frutas siguen sin calendario validado.</li>
+<li>Fuentes sin eventos no prueban vías libres: cobertura de clima/transporte permanece desconocida, sin semáforos verdes inventados.</li>
+<li>Un fallo de actualización no debe borrar historia: promoción atómica de dataset, copia anterior conservada, estado de error y contador. Los originales permanecen por huella.</li>
+<li>Programación creada no equivale a ejecución futura observada: se distingue confirmación ACTIVE de primera corrida programada. Requiere equipo y aplicación disponibles.</li>
+<li>Caché por URL/huella puede no detectar cambio de PDF servido en la misma URL: limitación residual explícita; un cambio de enlace/versionado sí se ingiere como revisión.</li>
+</ul>
+<p>Riesgos residuales: metodología de calidad, calendario específico, origen/rutas/avisos actuales, cambios del publicador, disponibilidad del runtime local y utilidad aún no medida. El producto predictivo no se presenta como terminado.</p>
+<p>La canasta ampliada añade dos mercados y conserva sus etiquetas; que una fila coincida en variedad literal no certifica calidad equivalente. La tabla da la diferencia aritmética y conserva mercado/fecha/fuente para que la persona la interprete. Las variedades solicitadas que exceden el rótulo oficial permanecen sin precio asignado.</p></section><section id="backlog"><a href="backlog.md">Fuente Markdown</a><h2>Plan y estado de implementación · v0.3</h2>
+<h3>Completado técnicamente</h3>
+<ul>
+<li>Descubrimiento, especificación y arquitectura SDD; selección de tres frutas por datos reales.</li>
+<li>Descarga de 24 reportes diarios oficiales del 1 al 28/10/2026; 72 observaciones, precios por envase, equivalencias y volumen por fruta.</li>
+<li>Archivo de prensa separado, comparación y exposición de dos discrepancias del 20/10.</li>
+<li>Descubrimiento de nuevos documentos, caché verificable, promoción atómica, conservación ante fallos y bloqueo de concurrencia.</li>
+<li>Automatización nativa diaria a las 11:00 de Lima, estado visible y comando manual recuperable.</li>
+<li>UI, histórico por fecha, conversiones, abastecimiento, exportación y calendario parcial explícito.</li>
+<li>Ampliación de 43 opciones de canasta, 34 familias con precios, filtros por categoría/producto/variedad/mercado/fecha y fuente directa por observación: 2.440 filas y 27 PDF al corte 9/11/2026.</li>
+<li>Betarraga, espinaca, coliflor y kion incorporados desde el boletín conjunto oficial. Atributos varietales que la fuente no declara y cinco productos sugeridos sin observación permanecen sin precio.</li>
+<li>Pruebas, contraste independiente de las 72 filas y revisión visual de PDF. Resultado UI y comprobaciones del Atlas registrados en validation.md.</li>
+</ul>
+<h3>P0 · Calidad y metodología</h3>
+<p>Responsable propuesto: mantenedor de datos. Obtener definición de calidad/calibre de estos reportes, su alcance por producto y equivalencia de campañas; registrar evidencia metodológica antes de habilitar referencia comparable. Si no se confirma, continuar mostrando información observada con confianza limitada.</p>
+<h3>P1 · Calendario y riesgo</h3>
+<p>Responsable propuesto: investigador agrícola. Series regionales mensuales por variedad o calendario técnico aplicable; años base y campaña. Procedencia real de ingresos y rutas documentadas. Ingerir eventos oficiales con emisión/inicio/fin y geometría solo cuando sea posible relacionarlos con el corredor de ese producto. Mantener desconocido en caso contrario.</p>
+<h3>P1 · Piloto de uso</h3>
+<p>Cinco consultas reales durante dos semanas, tres participantes, evidencia de fecha/unidad/calidad del precio encontrado. Evaluar tiempo de consulta y comprensión de límites. No interpretar diferencia mayorista-minorista como error predictivo o ahorro. Aceptación humana pendiente.</p>
+<h3>P2 · Modelos e integraciones</h3>
+<p>Solo después de demostrar cobertura y calidad. Variable objetivo, cortes temporales sin fuga, comparación con persistencia y mediana estacional, error por fruta y calibración de cualquier probabilidad. Los 24 días actuales no justifican modelo predictivo.</p>
+<h2>030, #086 y #100 pueden reutilizar contratos de comparabilidad, mercados y eventos viales. #011, #033 y #069 son conexiones de diseño. No se activó ningún conector por mencionar una relación.</h2>
+<p>La utilidad de la comparación y legibilidad de los filtros está pendiente de validación con hogares de Lima. La canasta no se convierte automáticamente en recomendaciones; la calidad, el origen del lote, la ruta y el precio minorista siguen fuera del alcance medido.</p></section><section id="acceptance"><a href="acceptance.md">Fuente Markdown</a><h2>Criterios de aceptación y trazabilidad · v0.3</h2>
+<ul>
+<li>AC01 → FR01/09: 24 PDF oficiales y 72 precios en el corte inicial, tres frutas por reporte, con fuente, fecha, página, envase y conversión. Contraste independiente de tablas geométricas con las 72 filas.</li>
+<li>AC02 → FR02: corte 20/10 excluye posteriores; 25/10 usa última observación del 24; antes del corpus produce vacío. Ningún día ausente se interpola.</li>
+<li>AC03 → FR02/05: 24/28 días de cobertura al 28/10 por fruta. Promedios de siete días y campo Ayer no generan observaciones.</li>
+<li>AC04 → FR03/04: UI solo con corpus real, calidad desconocida bloquea referencia aunque haya 24 días. Antigüedad superior a dos días degrada estado; volumen no genera recomendación.</li>
+<li>AC05 → FR04: pruebas sintéticas de umbral 21 días y descuento 10 %; 20 días o calidad desconocida no califican. Nunca se produce instrucción automática de compra.</li>
+<li>AC06 → FR06: selector costa/selva distingue orientación genérica de plátano; naranja/sandía y origen específico siguen desconocidos.</li>
+<li>AC07 → FR07: al 28/10, naranja 161 t, bizcocho 77 t, sandía 108 t; no se usa total de mercado. El origen permanece null.</li>
+<li>AC08 → FR08: selección cambia cálculo, volumen y exportación. Envase/kg verificables; cantidad inválida produce error; 2 kg de naranja con 21,50/24 dan 1,79 PEN al redondear total.</li>
+<li>AC09 → FR09: coma/punto, falta de fruta, duplicado, fecha incorrecta, equivalencia inválida, PDF no válido y cambio de columnas; fallos conservan data.json y registran contador; ejecución sin cambios no lo reescribe.</li>
+<li>AC10 → calidad: UI de escritorio/móvil, enlaces PDF con página, JSON exportable, estado de actualización y errores. Sin red externa necesaria para dibujar el panel.</li>
+<li>AC11 → FR10: automatización ACTIVE confirmada mediante herramienta nativa, 11:00 Lima, identidad conservada; se verifica ejecución manual e idempotencia. La primera ejecución programada es observación futura, no aceptación ya realizada.</li>
+</ul>
+<p>La aceptación técnica se documenta con evidencias en validation.md. El piloto de producto y la aceptación del usuario no se infieren de estas comprobaciones.</p>
+<h3>Canasta multi-mercado · 10/11/2026</h3>
+<ul>
+<li>AC12 → FR01/07: 43 opciones visibles, 34 con observaciones de precio, 2.440 observaciones, 27 PDF fuente y corte del 9/11/2026. El registro conserva precio PEN/kg, fecha, mercado y enlace/página oficial.</li>
+<li>AC13 → FR02/03: filtros por categoría, producto, etiqueta literal de variedad, mercado y fecha; coincidencias de fecha/producto/variedad muestran ambos mercados y su diferencia solo cuando existen dos precios.</li>
+<li>AC14 → FR06: atributos “mandarina sin pepa”, “uva verde sin pepa” y “manzana verde chilena” quedan seleccionables sin observación ni precio heredado. Las cinco sugerencias de arveja, ajo, acelga, perejil y culantro indican que no se encontró precio comparable en los boletines revisados.</li>
+<li>AC15 → cobertura: las etiquetas de betarraga, espinaca, coliflor, kion, Piña Golden, Palta Fuerte y plátanos/frutillas solicitados se cotejaron con los reportes oficiales detallados en research-log.md.</li>
+<li>AC16 → interfaz: se revisó que los selectores producen filas con fecha, mercado, S/kg y página; la selección de un atributo no confirmado da cero observaciones y muestra la razón en pantalla.</li>
+</ul>
+<p>Estos criterios validan cobertura y trazabilidad observable. No evalúan utilidad de compra, calidad homogénea ni ahorro. Los resultados de la suite listados en validation.md pertenecen a la entrega previa v0.2, no a esta ampliación.</p></section><section id="validation"><a href="validation.md">Fuente Markdown</a><h2>Validación de la entrega · v0.3</h2>
+<p>Cierre técnico: 29/10/2026, America/Lima. Corte del dataset: 28/10/2026. Propuesta SDD y demo con datos reales implementadas y verificadas; aceptación humana y piloto pendientes.</p>
+<h3>Ampliación de canasta · 10/11/2026</h3>
+<p>La comprobación de fuentes y variedades se amplió a la colección diaria de boletines MIDAGRI GMML/MMF2 y a reportes detallados de MMF2. El detalle de cada observación de la demo enlaza al PDF oficial y página. Se mantiene como último corte incorporado el dato más reciente que publica el recolector; los días ausentes quedan vacíos.</p>
+<ul>
+<li>43 opciones de catálogo; 34 familias con precios observados y 9 opciones que permanecen sugeridas o con atributos no confirmados.</li>
+<li>2.440 observaciones y 27 PDF fuente; último reporte observado 9/11/2026 en la copia que se revisa para esta edición.</li>
+<li>La interfaz incorpora filtros de categoría, producto, variedad, mercado y fecha. El detalle expone S/kg, día observado, mercado y enlace a fuente/página. La comparación alinea fecha, producto y rótulo oficial exacto; si uno de los mercados no presenta observación equivalente, su precio y la diferencia quedan como “—”.</li>
+<li>Las etiquetas de la fuente verifican Piña Golden, Manzana Importada (Chilena), Palta Fuerte Costa; plátanos Bizcocho, Isla, Manzano y Seda; fresas Sabrina y San Andreas; Beterraga/Espinaca/Coliflor Criolla-Serrana y Kion Costa/Selva.</li>
+<li>“Mandarina sin pepa”, “Uva verde sin pepa” y “Manzana verde chilena” se muestran como atributos pendientes sin heredar precios. “Uva Rosada Sin Pepa” es el rótulo encontrado; no acredita color verde. Ajo, acelga, arveja, perejil y culantro quedan visibles como sugerencias sin precio comparable.</li>
+<li>Los precios por envase solo se normalizan cuando el PDF declara el peso equivalente. La cifra siempre permanece vinculada a la fecha y al mercado que la publicó.</li>
+</ul>
+<p>Este apartado registra revisión de datos y de la interfaz ampliada. Los resultados de las pruebas listadas abajo pertenecen a la entrega v0.2 del 29/10/2026 y no se presentan como pruebas ejecutadas sobre v0.3.</p>
+<h3>Datos y fuentes</h3>
+<ul>
+<li>24 PDF oficiales conservados en evidence/reports/, 72 observaciones de tres frutas. Cada fuente conserva URL del documento y del compendio, fecha, recuperación, página y SHA-256.</li>
+<li>Contraste independiente por método: pypdf extrae filas textuales; pdfplumber reconstruye tablas por geometría. Las 72 filas coinciden en precio Hoy por envase, equivalencia, unidad y volumen Hoy. Resultado: <a href="../../evidence/audit.json">auditoría</a>.</li>
+<li>Revisión visual de las páginas 2 y 3 de reportes 20 y 28/10: encabezados Ayer/Hoy, columnas de medias, envases y pesos confirmados. <a href="../../evidence/qa/2026-10-28-page-3.png">Página de muestra 28/10</a>.</li>
+<li>Datos del 28/10: naranja 21,50/24 = 0,895833… PEN/kg y 161 t; bizcocho 26,50/18 = 1,472222… PEN/kg y 77 t; sandía 0,98 PEN/kg y 108 t.</li>
+<li>Se conservan las 37 observaciones de prensa previas en <a href="../../press-archive.json">archivo</a>. Dos discrepancias del 20/10 quedan expuestas: naranja 0,98 en prensa frente a 22,75/24 en PDF; sandía 0,93 frente a 0,95. No se promedian ni se hereda calidad del artículo.</li>
+</ul>
+<h3>Pruebas ejecutadas</h3>
+<ul>
+<li>node --test tests/core.test.cjs: 8 pruebas aprobadas; corpus, corte temporal, días ausentes, cobertura, umbrales, calidad, volumen por fruta, conversiones, exportación y rechazo de registros inválidos.</li>
+<li>Python incluido con Codex, -m unittest discover -s tests -p &#x27;test_*.py&#x27;: 12 pruebas aprobadas. Parser diario y archivo de prensa; números, listas, unidades/pesos, fecha, columnas, ausencias, duplicados, descubrimiento, exclusión de futuros, fallos atómicos, idempotencia y bloqueo concurrente. Los errores impresos por fixtures son fallos simulados esperados, no incidencias de producción.</li>
+<li>node --check app.js y core.js: sintaxis correcta.</li>
+<li>node tests/http.cjs: página, scripts, estilos, dataset, estado, automatización, archivo de prensa, auditoría y SDD devuelven HTTP 200; ruta interna .local bloqueada y POST rechazado.</li>
+<li>Ejecución real del recolector el 29/10 a las 01:05–01:06: éxito, sin cambios, 72 observaciones y 24 documentos. data.json conserva sus bytes y fecha de cambio del 28/10; status.json registra la consulta del 29/10. Último dato con un día de antigüedad y sin fallos consecutivos.</li>
+</ul>
+<h3>Recorrido de navegador observado</h3>
+<p>Chrome, navegador real. Inicio al corte 29/10 muestra dato 28/10, tres frutas y cobertura 23/28: el 1/10 queda fuera de la ventana móvil. Al corte 28/10 la cobertura es 24/28. Precio antiguo no se etiqueta como precio de hoy.</p>
+<p>Selección de sandía y corte 20/10 actualiza precio a 0,95 PEN/kg, volumen a 58 t y 3 kg a 2,85 PEN. Naranja 2 kg se calcula con 21,50/24 sin redondeo previo: total 1,79 PEN. Exportación descargada desde el navegador y comprobada como JSON v0.2, con fecha de corte y precio 0,95 en la selección histórica; la exportación anterior v0.1 permanece separada.</p>
+<p>Fuentes y cobertura muestra los 24 reportes y las dos discrepancias, con ambas URLs. Calendario costa/selva cambia su orientación y conserva desconocidos en naranja/sandía. Confianza permanece limitada por calidad/origen/ruta, aunque hay volumen y cobertura diaria.</p>
+<p>Revisión visual de escritorio y ancho efectivo de 390 píxeles CSS: sin desbordamiento horizontal global (scrollWidth y clientWidth de 380, con scrollbar). Navegación y tablas conservan desplazamiento interno cuando corresponde. Se corrigió la alineación de fechas extremas del gráfico para evitar recortes. No se observaron errores de consola. No se realizó auditoría completa de accesibilidad ni prueba con lector de pantalla.</p>
+<p><a href="../../evidence/qa/demo-desktop.jpg">Captura del radar</a> · <a href="../../evidence/qa/demo-mobile.jpg">vista móvil</a> · <a href="../../evidence/qa/demo-sources.jpg">fuentes</a>.</p>
+<h3>Actualización local y publicación web</h3>
+<p>La configuración local del recolector mantiene la consulta diaria a las 11:00 de Lima y el estado se conserva en status.json en el entorno del mantenedor. Este dato describe la copia local, no la disponibilidad de la tarea en internet.</p>
+<p>La web publicada es una instantánea estática de los archivos disponibles al compilarla. No recibe cambios diarios del colector local; cada fila muestra la fecha observada y, al pasar dos días, la interfaz marca la serie como desactualizada hasta publicar una actualización nueva.</p>
+<h3>Integración y límites</h3>
+<p>Se actualizaron estado de #029, tarjeta de portada, modal de catálogo y su generador, fichas, listado de subproyectos, changelog y registro de entrega. enriquecer_catalogo.py y verificar_atlas.cjs aprobaron las 188 fichas bilingües; registrar_entrega.cjs registró 23 interfaces. comprobar_documentos.py aprobó 3345 referencias Markdown y un paquete de 1110 archivos. El último renueva manifiesto y ZIP. Una primera generación del ZIP falló su comprobación de integridad; se regeneró y la comprobación completa pasó. No se atribuye una causa no confirmada. No hubo modificación del servidor, instalación de paquetes, publicación pública ni edición de sources/.</p>
+<p>Calendario específico de naranja/sandía y bizcocho, metodología de calidad/calibre, procedencia, rutas y avisos vigentes siguen pendientes. La caché no detecta reemplazos silenciosos del PDF bajo una URL idéntica; sí procesa cambios de enlace/versionado. El producto no ofrece predicción ni recomendación de compra validada. La aceptación del usuario exige el piloto descrito en backlog.md.</p></section><section id="handoff"><a href="handoff.md">Fuente Markdown</a><h2>Traspaso y operación · v0.3</h2>
+<p>Estado al 10/11/2026: canasta de 43 opciones (34 con precio oficial), 2.440 observaciones y 27 fuentes PDF del GMML/MMF2 y MMF2 detallado. Último corte incorporado: 9/11/2026 en la copia revisada. No hay pronóstico ni recomendación de compra validada.</p>
+<p>Demo local: http://localhost:4180/subproyectos/FrutaRadar_Peru_029/ . Canasta: http://localhost:4180/subproyectos/FrutaRadar_Peru_029/#productos . SDD: docs/SDD/. El servidor Atlas existente sirve la sección; si se detuvo, ejecutar Abrir Atlas Local.cmd de Atlas.</p>
+<h3>Operación</h3>
+<p>Desde la carpeta del subproyecto, en PowerShell:</p>
+<p>    &amp; &#x27;C:/Users/gonza/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe&#x27; tools/collect.py</p>
+<p>Este punto de entrada ejecuta la actualización histórica MMF2 y después la canasta oficial multi-mercado. Un error del primer proceso detiene la cadena; un error de descarga de la canasta conserva su copia válida y registra el fallo. Leer status.json para ambos estados y la última fecha válida.</p>
+<p>La actualización local está programada diariamente a las 11:00, America/Lima y requiere equipo y Codex disponibles. La publicación web es una instantánea y no recibe automáticamente los datos de esa tarea local. Tres fallos seguidos o más de dos días desde el último dato requieren atención.</p>
+<h3>Evidencia</h3>
+<p>market-data.json contiene fuente, fecha, mercado, etiqueta literal de variedad, valor por kg y página PDF en cada observación. Los documentos oficiales descargados se archivan en evidence/market-bulletins/ y evidence/reports/, con SHA-256 en sus metadatos. No editar esos originales para corregir una etiqueta ni rellenar filas ausentes.</p>
+<p>Fuente resumen: colección MIDAGRI de boletines diarios GMML/MMF2. Frutas y bayas con mayor detalle: reportes diarios MMF2. En la demo, usar el vínculo de cada fila para revisar directamente el reporte específico. SDD/research-log.md mantiene la cobertura y las denominaciones verificadas.</p>
+<h3>Límites y siguiente paso</h3>
+<p>Los mercados publican distinto surtido y no siempre coinciden en texto de variedad; la comparación no inventa precio de contraparte. Persisten sin confirmación “mandarina sin pepa”, “uva verde sin pepa” y “manzana verde chilena”. Las sugerencias de arveja, ajo, acelga, perejil y culantro requieren un reporte oficial con precio comparable antes de completar esa cobertura.</p>
+<p>Próxima mejora: evaluar legibilidad y utilidad de los filtros con hogares de Lima y buscar series oficiales de calidad/calibre, procedencia de lotes, clima y rutas. No habilitar predicción ni recomendaciones antes de resolver esas dimensiones.</p></section></main></html>
