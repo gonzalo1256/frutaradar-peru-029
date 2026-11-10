@@ -15,6 +15,10 @@ La comprobación de fuentes y variedades se amplió a la colección diaria de bo
 
 Este apartado registra revisión de datos y de la interfaz ampliada. Los resultados de las pruebas listadas abajo pertenecen a la entrega v0.2 del 29/10/2026 y no se presentan como pruebas ejecutadas sobre v0.3.
 
+## Publicación web
+
+Publicada en GitHub Pages: [https://gonzalo1256.github.io/frutaradar-peru-029/](https://gonzalo1256.github.io/frutaradar-peru-029/). El repositorio público aislado contiene solo los activos estáticos de FrutaRadar, su dataset, evidencia de la entrega y documentos SDD seleccionados; no contiene el resto de Atlas. La publicación es una instantánea del 10/11/2026 y no se actualiza automáticamente cuando corre el recolector local.
+
 ## Datos y fuentes
 
 - 24 PDF oficiales conservados en evidence/reports/, 72 observaciones de tres frutas. Cada fuente conserva URL del documento y del compendio, fecha, recuperación, página y SHA-256.
@@ -51,6 +55,6 @@ La web publicada es una instantánea estática de los archivos disponibles al co
 
 ## Integración y límites
 
-Se actualizaron estado de #029, tarjeta de portada, modal de catálogo y su generador, fichas, listado de subproyectos, changelog y registro de entrega. enriquecer_catalogo.py y verificar_atlas.cjs aprobaron las 188 fichas bilingües; registrar_entrega.cjs registró 23 interfaces. comprobar_documentos.py aprobó 3345 referencias Markdown y un paquete de 1110 archivos. El último renueva manifiesto y ZIP. Una primera generación del ZIP falló su comprobación de integridad; se regeneró y la comprobación completa pasó. No se atribuye una causa no confirmada. No hubo modificación del servidor, instalación de paquetes, publicación pública ni edición de sources/.
+La entrega de octubre actualizó el estado de #029, tarjeta de portada, modal de catálogo y su generador, fichas, listado de subproyectos, changelog y registro de entrega. enriquecer_catalogo.py y verificar_atlas.cjs aprobaron las 188 fichas bilingües; registrar_entrega.cjs registró 23 interfaces. comprobar_documentos.py aprobó 3345 referencias Markdown y un paquete de 1110 archivos. El ZIP de Atlas se regeneró tras una primera comprobación de integridad fallida. En esta ampliación no se modificó el servidor local ni se editaron archivos de sources/.
 
 Calendario específico de naranja/sandía y bizcocho, metodología de calidad/calibre, procedencia, rutas y avisos vigentes siguen pendientes. La caché no detecta reemplazos silenciosos del PDF bajo una URL idéntica; sí procesa cambios de enlace/versionado. El producto no ofrece predicción ni recomendación de compra validada. La aceptación del usuario exige el piloto descrito en backlog.md.

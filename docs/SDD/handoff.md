@@ -4,6 +4,8 @@ Estado al 10/11/2026: canasta de 43 opciones (34 con precio oficial), 2.440 obse
 
 Demo local: http://localhost:4180/subproyectos/FrutaRadar_Peru_029/ . Canasta: http://localhost:4180/subproyectos/FrutaRadar_Peru_029/#productos . SDD: docs/SDD/. El servidor Atlas existente sirve la sección; si se detuvo, ejecutar Abrir Atlas Local.cmd de Atlas.
 
+Sitio público: https://gonzalo1256.github.io/frutaradar-peru-029/ . Fuente aislada de la web: https://github.com/gonzalo1256/frutaradar-peru-029 . La publicación contiene una instantánea estática; la actualización diaria local no la despliega automáticamente.
+
 ## Operación
 
 Desde la carpeta del subproyecto, en PowerShell:
