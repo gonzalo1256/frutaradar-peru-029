@@ -1,4 +1,4 @@
-# Criterios de aceptación y trazabilidad · v0.3
+# Criterios de aceptación y trazabilidad · v0.4
 
 - AC01 → FR01/09: 24 PDF oficiales y 72 precios en el corte inicial, tres frutas por reporte, con fuente, fecha, página, envase y conversión. Contraste independiente de tablas geométricas con las 72 filas.
 - AC02 → FR02: corte 20/10 excluye posteriores; 25/10 usa última observación del 24; antes del corpus produce vacío. Ningún día ausente se interpola.
@@ -23,3 +23,12 @@ La aceptación técnica se documenta con evidencias en validation.md. El piloto 
 - AC16 → interfaz: se revisó que los selectores producen filas con fecha, mercado, S/kg y página; la selección de un atributo no confirmado da cero observaciones y muestra la razón en pantalla.
 
 Estos criterios validan cobertura y trazabilidad observable. No evalúan utilidad de compra, calidad homogénea ni ahorro. Los resultados de la suite listados en validation.md pertenecen a la entrega previa v0.2, no a esta ampliación.
+
+## Precios minoristas online · 10/11/2026
+
+- AC17 → FR11: 13 filas comerciales muestran fecha consultada, supermercado, producto, rótulo/variedad, precio publicado, unidad y ficha fuente. El snapshot es separado de observaciones MIDAGRI.
+- AC18 → FR12: 11 filas tienen S/kg publicado o calculado desde peso explícito; betarraga y coliflor permanecen por unidad y el campo S/kg vacío.
+- AC19 → FR13: selectores de categoría, producto, etiqueta comercial, retailer y fecha actualizan la tabla; cada fila mantiene su observación y enlace.
+- AC20 → FR14/15: la UI expone captura estática, ausencia de distrito/tienda seleccionada y disponibilidad de Wong indicada como “Sin Stock”. No se modifica la automatización MIDAGRI, ni se habilita compra o recomendación.
+
+La captura de precios retail no demuestra vigencia futura, stock local, entrega en Lima, equivalencia de calidad ni el precio final de caja.

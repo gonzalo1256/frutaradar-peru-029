@@ -1,4 +1,4 @@
-# Validación de la entrega · v0.3
+# Validación de la entrega · v0.4
 
 Cierre técnico: 29/10/2026, America/Lima. Corte del dataset: 28/10/2026. Propuesta SDD y demo con datos reales implementadas y verificadas; aceptación humana y piloto pendientes.
 
@@ -18,6 +18,8 @@ Este apartado registra revisión de datos y de la interfaz ampliada. Los resulta
 ## Publicación web
 
 Publicada en GitHub Pages: [https://gonzalo1256.github.io/frutaradar-peru-029/](https://gonzalo1256.github.io/frutaradar-peru-029/). El repositorio público aislado contiene solo los activos estáticos de FrutaRadar, su dataset, evidencia de la entrega y documentos SDD seleccionados; no contiene el resto de Atlas. La publicación es una instantánea del 10/11/2026 y no se actualiza automáticamente cuando corre el recolector local.
+
+En la actualización v0.4, la sección minorista registra 13 observaciones de Tottus y Wong con fecha de consulta 10/11/2026. La revisión manual de la demo local muestra las 13 filas, precios originales/unidades y vínculos a ficha; al filtrar “Verduras y hortalizas” quedan betarraga, coliflor y espinaca (tres registros, solo espinaca comparable por kg). La publicación incluye retail-data.json por separado del histórico MIDAGRI y conserva advertencias de ubicación y stock.
 
 ## Datos y fuentes
 

@@ -1,8 +1,8 @@
-# Arquitectura y decisiones · v0.3
+# Arquitectura y decisiones · v0.4
 
 ## ADR-001 · Demo estática y archivos de datos
 
-La ruta local de Atlas 4180 se conserva. El navegador lee data.json, market-data.json, status.json y automation.json; la pantalla nunca descarga o interpreta reportes desde la sesión del usuario. El recolector corre por separado en el equipo disponible para la automatización.
+La ruta local de Atlas 4180 se conserva. El navegador lee data.json, market-data.json, retail-data.json, status.json y automation.json; la pantalla nunca descarga ni interpreta reportes desde la sesión del usuario. El recolector MIDAGRI corre por separado en el equipo disponible para la automatización.
 
 data.json conserva el histórico detallado original de MMF2 para el radar de frutas, con valores por envase, equivalencia, volumen y calidad desconocida cuando aplica. market-data.json añade la canasta filtrable GMML/MMF2, manteniendo cada mercado, rótulo literal de variedad, fecha de observación, precio PEN/kg, URL y página fuente. No se mezclan ambas estructuras en una serie que oculte nivel o unidad.
 
@@ -38,4 +38,12 @@ Un dato de más de dos días o tres fallos seguidos requiere atención. Un éxit
 
 ## Límites
 
-No hay predicción, sugerencia de compra, precio minorista, climatología o bloqueo de ruta unido a una observación. Los datos no declaran calidad homogénea. UI y exportación deben mantener la fecha y el mercado junto a cada precio.
+No hay predicción, sugerencia de compra, climatología o bloqueo de ruta unido a una observación. Los datos mayoristas no declaran calidad homogénea. UI y exportación deben mantener la fecha y el mercado junto a cada precio.
+
+## ADR-007 · Snapshot retail aislado
+
+retail-data.json contiene cotizaciones de fichas online observadas manualmente. Cada fila conserva supermercado/canal, fecha de captura, nombre comercial, unidad publicada, disponibilidad visible y URL. La UI filtra categoría, producto, etiqueta comercial, retailer y fecha en una vista separada de GMML/MMF2.
+
+Un precio expresado por kg se conserva; una presentación solo se convierte cuando el peso aparece explícitamente en el rótulo o ficha. Los productos por unidad sin peso, como betarraga y coliflor del corte actual, no reciben valor S/kg. La fecha no prueba que el mismo precio continúe vigente al abrir el enlace. Las páginas pueden requerir distrito/tienda; Wong mostró ausencia de stock en las fichas consultadas y Tottus solicitó ubicación para validar cobertura.
+
+El snapshot retail no forma parte de tools/collect.py ni de la automatización MIDAGRI, no usa ubicación del usuario y no activa recomendaciones. La publicación GitHub Pages sigue siendo manual y estática; cada release copia el archivo actual solo tras revisar los cambios.
